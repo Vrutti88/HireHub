@@ -1,8 +1,21 @@
 # HireHub
 
-A job search and career management app built with Flutter and Firebase.
+A comprehensive career management and job search platform built with Flutter and Firebase.
 
-HireHub helps job seekers discover opportunities, track applications, compare offers, and analyze job fit with scoring algorithms, on-device resume parsing, and interview prep tools.
+## Overview
+
+Job hunting often feels like an unstructured numbers game. Candidates submit applications across dozens of job boards without clear visibility into why they do or don't hear back, which technical qualifications are holding them back, or how to systematically compare competing offers when considering trade-offs between compensation, remote work flexibility, and company culture.
+
+**HireHub** bridges this gap by transforming the job hunt into a structured, data-informed workflow. Built as a cross-platform mobile and web application, HireHub combines deterministic job-fit matching, local PDF resume extraction, multi-attribute decision matrices, and interview preparation tools into a single unified workspace.
+
+### Core Capabilities
+
+- **Deterministic Fit & Skill Gap Analysis**: Evaluates roles using a 5-factor scoring model (Skills 50%, Experience 20%, Location 10%, Job Type 10%, Education 10%). For every listing, candidates see verified matching skills, missing requirements, and a simulated projection showing how their match score increases if they learn those missing skills.
+- **Multi-Criteria Decision Matrix**: Compare opportunities side-by-side and rank offers using customizable criteria weights or presets (*Balanced*, *High Compensation*, *Remote First*) across salary, remote flexibility, culture ratings, and role alignment.
+- **On-Device Resume Extraction**: Parses uploaded PDF resumes directly on the device using low-level byte-stream extraction (supporting compressed FlateDecode streams and embedded font glyph CMaps) to detect technical stacks without sending documents to third-party services.
+- **Application Pipeline & Health Score**: Tracks application progress across 6 recruitment stages (Applied, In Review, Shortlisted, Interview, Offer, Rejected) while calculating a 100-point Application Health Index that analyzes search momentum, resume completeness, and interview conversion rates.
+- **Career Growth Hub**: Includes role-tailored technical interview questions with model answers, pre-interview readiness checklists, city-based salary benchmarks, and an interactive counter-offer negotiation simulator.
+- **Zero-Configuration Demo Mode**: Ships with a rich, realistic local seed dataset covering jobs, companies, applications, and candidate profiles—allowing anyone to explore all features immediately without requiring an initial Firebase setup.
 
 ---
 
