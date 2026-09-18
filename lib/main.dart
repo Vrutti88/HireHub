@@ -15,6 +15,7 @@ import 'services/auth_service.dart';
 import 'services/firestore_service.dart';
 
 import 'firebase_options.dart';
+import 'data/seed_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,17 +40,36 @@ void main() async {
   final firestoreService = FirestoreService();
   final authService = AuthService(firestoreService);
 
+  final authProvider = AuthProvider(authService);
+  final jobProvider = JobProvider(firestoreService);
+  final appProvider = ApplicationProvider(firestoreService);
+  final skillProvider = SkillProvider(firestoreService);
+  final interviewProvider = InterviewProvider(firestoreService);
+  final savedJobsProvider = SavedJobsProvider(firestoreService);
+  final notifProvider = NotificationProvider(firestoreService);
+  final settingsProvider = SettingsProvider();
+
+  try {
+    if (Uri.base.queryParameters.containsKey('screen')) {
+      authProvider.setMockUser(SeedData.initialUser);
+      appProvider.loadApplications(SeedData.initialUser.uid);
+      interviewProvider.loadInterviews(SeedData.initialUser.uid);
+      notifProvider.loadData(SeedData.initialUser.uid);
+      savedJobsProvider.loadSavedJobs(SeedData.initialUser.uid);
+    }
+  } catch (_) {}
+
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => AuthProvider(authService)),
-        ChangeNotifierProvider(create: (_) => JobProvider(firestoreService)),
-        ChangeNotifierProvider(create: (_) => ApplicationProvider(firestoreService)),
-        ChangeNotifierProvider(create: (_) => SkillProvider(firestoreService)),
-        ChangeNotifierProvider(create: (_) => InterviewProvider(firestoreService)),
-        ChangeNotifierProvider(create: (_) => SavedJobsProvider(firestoreService)),
-        ChangeNotifierProvider(create: (_) => NotificationProvider(firestoreService)),
-        ChangeNotifierProvider(create: (_) => SettingsProvider()),
+        ChangeNotifierProvider.value(value: authProvider),
+        ChangeNotifierProvider.value(value: jobProvider),
+        ChangeNotifierProvider.value(value: appProvider),
+        ChangeNotifierProvider.value(value: skillProvider),
+        ChangeNotifierProvider.value(value: interviewProvider),
+        ChangeNotifierProvider.value(value: savedJobsProvider),
+        ChangeNotifierProvider.value(value: notifProvider),
+        ChangeNotifierProvider.value(value: settingsProvider),
       ],
       child: const HireHubApp(),
     ),

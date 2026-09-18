@@ -6,6 +6,30 @@ HireHub helps job seekers discover opportunities, track applications, compare of
 
 ---
 
+## Screenshots
+
+| Home Dashboard | Job Search | Job Details |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/01_home_dashboard.png" width="250" alt="Home Dashboard" /> | <img src="docs/screenshots/02_job_search.png" width="250" alt="Job Search" /> | <img src="docs/screenshots/03_job_details.png" width="250" alt="Job Details" /> |
+
+| Job Fit Analysis | Decision Matrix | Application Pipeline |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/04_job_fit_analysis.png" width="250" alt="Job Fit Analysis" /> | <img src="docs/screenshots/05_decision_matrix.png" width="250" alt="Decision Matrix" /> | <img src="docs/screenshots/06_applications_tracker.png" width="250" alt="Application Pipeline" /> |
+
+| Application Health Index | Candidate Profile | Salary & Offer Simulator |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/07_application_health.png" width="250" alt="Application Health Score" /> | <img src="docs/screenshots/08_candidate_profile.png" width="250" alt="Candidate Profile" /> | <img src="docs/screenshots/09_salary_explorer.png" width="250" alt="Salary Explorer" /> |
+
+<details>
+<summary><b>View Interview Prep Hub Screenshot</b></summary>
+<br>
+
+<img src="docs/screenshots/10_interview_prep.png" width="250" alt="Interview Prep Hub" />
+
+</details>
+
+---
+
 ## Features
 
 ### Job Search & Fit Analysis

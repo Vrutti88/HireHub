@@ -135,4 +135,9 @@ class AuthProvider extends ChangeNotifier {
     _authService.updateUser(_user!);
     notifyListeners();
   }
+
+  void setMockUser(UserModel mockUser) {
+    _user = mockUser;
+    notifyListeners();
+  }
 }
