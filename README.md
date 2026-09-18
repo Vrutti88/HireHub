@@ -150,18 +150,6 @@ lib/
 
 > **Demo Mode**: The app includes built-in sample data (`seed_data.dart`). If Firebase is not configured or offline, HireHub automatically runs in demo mode with sample jobs, applications, and profiles so you can test all features right away.
 
-### Firebase Configuration (Optional)
-
-To connect your own Firebase project:
-1. Create a project in the [Firebase Console](https://console.firebase.google.com/).
-2. Enable **Authentication** (Email/Password) and **Cloud Firestore**.
-3. Run the FlutterFire CLI:
-   ```bash
-   dart pub global activate flutterfire_cli
-   flutterfire configure
-   ```
-4. This will regenerate `lib/firebase_options.dart` with your project's credentials.
-
 ---
 
 ## Running Tests
@@ -181,8 +169,3 @@ Test suites include:
 - `safe_parsers_test.dart` – Verifies null-safety and error resilience against malformed Firestore data.
 - `widget_test.dart` – Validates app initialization and splash flow.
 
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
