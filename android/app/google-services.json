@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "351234632257",
+    "project_id": "hire-hub-93181",
+    "storage_bucket": "hire-hub-93181.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351234632257:android:3390b9111360c13c6134c0",
+        "android_client_info": {
+          "package_name": "com.example.hirehub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-oNNnpdHNjBA9Hrf53i23aXP6YM_-h4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
